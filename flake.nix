@@ -1,7 +1,7 @@
 {
   inputs = {
     hyprland.url = "github:hyprwm/Hyprland";
-    hyprfocus.url = "github:pyt0xic/hyprfocus";
+	hyprlang.url = "github:hyprwm/hyprlang";
     nix-filter.url = "github:numtide/nix-filter";
   };
   outputs = { self, hyprland, nix-filter, ... }:
