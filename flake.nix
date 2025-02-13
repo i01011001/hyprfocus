@@ -23,9 +23,10 @@
             };
 
 
-            nativeBuildInputs = with pkgs; [ pkg-config hyprlang ];
+            nativeBuildInputs = with pkgs; [ pkg-config ];
 
             buildInputs = with pkgs; [
+              hyprlang
               hyprland.packages.${system}.hyprland.dev
             ]
             ++ hyprland.packages.${system}.hyprland.buildInputs;
