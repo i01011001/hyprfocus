@@ -27,7 +27,7 @@
             nativeBuildInputs = with pkgs; [ pkg-config ];
 
             buildInputs = with pkgs; [
-                    inputs.hyprlang.packages.${pkgs.system}.hyprlang
+              hyprlang.packages.${system}.default
               hyprland.packages.${system}.hyprland.dev
             ]
             ++ hyprland.packages.${system}.hyprland.buildInputs;
