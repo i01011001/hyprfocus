@@ -1,6 +1,7 @@
 {
   inputs = {
     hyprland.url = "github:hyprwm/Hyprland";
+    hyprfocus.url = "github:pyt0xic/hyprfocus";
     nix-filter.url = "github:numtide/nix-filter";
   };
   outputs = { self, hyprland, nix-filter, ... }:
@@ -26,7 +27,7 @@
             nativeBuildInputs = with pkgs; [ pkg-config ];
 
             buildInputs = with pkgs; [
-              hyprlang
+                    inputs.hyprlang.packages.${pkgs.system}.hyprlang
               hyprland.packages.${system}.hyprland.dev
             ]
             ++ hyprland.packages.${system}.hyprland.buildInputs;
